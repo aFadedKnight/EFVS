@@ -12,7 +12,7 @@ For more information on what NDI feeds are, how to click here.
 **NDI Feeds:**
 In order to start bringing NDI feeds into the project you need to first navigate to the NDI Folder (Content>Studio>NDI). In that folder there will be at least one NDIReceiver folder which you can open. Open the blueprint and look for the NDI source section.
 
-![alt text](docs/img_001.png)
+![Bringing NDI Feed into Unreal](Docs/img_001.png)
 
 You will put the source name of the NDI Feed into the In Source Name.
 
