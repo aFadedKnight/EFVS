@@ -19,38 +19,38 @@ You will put the source name of the NDI Feed into the In Source Name.
 **Direct Camera Feed:**
 If you want to take a camera feed that is directly connected to the computer either through usb or a capture card go to the PhysicalCamera folder also in the NDI folder. There will be at least one Cam folder. Go into one and open up the media player. You will see a small folder dropdown and in there you can look for the video source you’d like to add. After selecting make sure you copy the entire link for that source.
 
+![Finding Camera Feed in Unreal](Docs/img_002.png)
 
+Go back to the physical camera folder and open the Cameras Init blueprint. In there you can edit the source your camera uses by pasting the link you copied earlier into the URL.
 
-Once selected make sure you save the playlist.Go back to the physical camera folder and open the Cameras Init blueprint. In there you can edit the source your camera uses by pasting the link you copied earlier into the URL.
-
-
+![Bringing Camera Feed into Unreal](Docs/img_003.png)
 
 ### Getting NDI Out Feed
 The NDI out feed should automatically start when you start playing the project. From there you can go into your streaming software and add it as an NDI source (Note: Not all software supports NDI natively and you may need a plug-in).
 ### Controlling Camera Moves
 There are four buttons - Door, Hosts, Casters, TV - that rest below the monitoring screen, and clicking each button will trigger the camera to move to the location in the studio that corresponds to the button. 
 
-
-
-
-Blueprint code for the functionality behind the Hosts button
+![Camera Controls in Studio](Docs/img_004.png)
+![Example Blueprint of Camera Move Code](Docs/img_005.png)
+*Blueprint code for the functionality behind the Hosts button*
 
 
 Note that once a button is pressed, the camera transition sequence will play to completion before responding to any new button presses. 
 ## Customize Studio
 In order to make changes to the theme of the studio, search for BP_Controller in the World Outliner to open its Details panel. The studio can be configured to display any theme from the Theme Select drop-down menu. 
 
+![Theme Select dropdown](Docs/img_006.png)
 
 ### Add New Theme
 In the content browser, under Studio/Customize/Themes, double-click ENUM_Themes to open up the asset editor. Here, the existing themes will be found. 
 
-
+![Add Enum for Theme](Docs/img_007.png)
 
 To add a new theme, select new and add the name of the theme which will be displayed in the drop-down menu. Description is optional. 
 
 After this, proceed to Studio/Customize/Themes and open up DT_Themes. Click on (+) Add to add a new row. 
 
-
+![Add New Theme in Data Table](Docs/img_008.png)
 
 Make sure the Row Name matches the Display Name entered in ENUM_Theme. In the row editor, choose the assets that fit the theme best. 
 ### Uses For Multiple Themes
