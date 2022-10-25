@@ -14,6 +14,7 @@ In order to start bringing NDI feeds into the project you need to first navigate
 
 
 You will put the source name of the NDI Feed into the In Source Name.
+
 **Direct Camera Feed:**
 If you want to take a camera feed that is directly connected to the computer either through usb or a capture card go to the PhysicalCamera folder also in the NDI folder. There will be at least one Cam folder. Go into one and open up the media player. You will see a small folder dropdown and in there you can look for the video source you’d like to add. After selecting make sure you copy the entire link for that source.
 
