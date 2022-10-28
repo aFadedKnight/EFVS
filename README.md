@@ -62,3 +62,5 @@ Textures for these materials can be set by creating an instance of the M_Monitor
 Make sure that the texture is at least a 1920 x 1080 png image for better quality. 
 Multiple Versions of Same Branding
 A particular theme for the studio can have several versions by changing the placement of the branding and the NDI feeds. All screens are designed to display both static branding images as well as NDI feeds.
+
+For further support, please contact Ben Scragg: bscragg@efuse.io.
