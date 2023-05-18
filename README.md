@@ -29,13 +29,13 @@ NDI is sending video over a network rather than through some sort of video cable
 
 In order to start bringing NDI feeds into the project you need to first navigate to the NDI Folder (Content>Studio>NDI). In that folder there will be at least one NDIReceiver folder which you can open. Open the blueprint and look for the NDI source section.
 
-![1.1](Docs/img_1-1)
+![1.1](Docs/img_1-1.png)
 
 1.1 Ndi source in NDI receiver blueprints
 
 You will put the source name of the NDI Feed into the In Source Name. You can easily find the name of your source by going into NDI Tools and opening up the studio monitor and finding your source in the dropdown. (Note: if your camera feed is stretched see the custom materials section, in customize studio, for fix)
 
-![1.2](Docs/img_1-2)
+![1.2](Docs/img_1-2.png)
 
 1.2 Example of finding the NDI Feed. Note you will not include the NDI - in the beginning or the resolution in the parenthesis at the end. In this case the feed is “NICKY-LAPTOP (Remote Connection 1)”.
 
@@ -44,13 +44,13 @@ There are many ways to set up NDI feeds on your network. If you are using vMix y
 
 If you want to take a camera feed that is directly connected to the computer either through usb or a capture card, go to the PhysicalCamera folder also in the NDI folder. There will be at least one Cam folder. Go into one and open up the media player. You will see a small folder dropdown and in there you can look for the video source you’d like to add. After selecting make sure you copy the entire link for that source.
 
-![1.3](Docs/img_1-3)
+![1.3](Docs/img_1-3.png)
 
 1.3 Media dropdown showing different camera sources
 
 Go back to the physical camera folder and open the Cameras Init blueprint. In there you can edit the source your camera uses by pasting the link you copied earlier into the URL.
 
-![1.4](Docs/img_1-4)
+![1.4](Docs/img_1-4.png)
 
 1.4 Physical cameras blueprint showing where to paste URL of video device
 
@@ -64,11 +64,11 @@ The NDI out feed should automatically start when you start playing the project. 
 
 There are four buttons - Door, Hosts, Casters, TV - that rest below the monitoring screen, and clicking each button will trigger the camera to move to the location in the studio that corresponds to the button. 
 
-![2.1](Docs/img_2-1)
+![2.1](Docs/img_2-1.png)
 
 2.1 Showing example of HUD and the 4 control buttons at the bottom of the screen
 
-![2.2](Docs/img_2-2)
+![2.2](Docs/img_2-2.png)
 
 2.2 Blueprint code for the functionality behind the Hosts button
 
@@ -81,13 +81,13 @@ If you use companion in your productions you are able to use that to control the
 
 In companion you will want to go to connections and add a generic osc connection and set the target ip to the ip of the machine running unreal with port 8000. If you need to use a different port for any reason set it to another port and you will need to change a setting in unreal shown later.
 
-![2.3](Docs/img_2-3)
+![2.3](Docs/img_2-3.png)
 
 2.3 companion connections panel
 
 Next you will want to add a new button or add to an existing button a new press action that is “osc: Send String”. The OSC Path will need to be “/unreal/location”(replace location with hosts, casters, door, or tv depending on where you are going. It is case sensitive). The value can just be left as text and the delay is up to you.
 
-![2.4](Docs/img_2-4)
+![2.4](Docs/img_2-4.png)
 
 2.4 companion button new osc press action
 
@@ -95,13 +95,13 @@ Once added you can test the button by pressing it with unreal playing to make su
 
 If you needed to use a port other than 8000 for osc then make sure you set unreal to have the new port as well by going to Content/Studio/ControlHUD and double click on UI_HUD. In the top right switch from designer and go to Graph. Scroll down to zoom out and drag right click to move around until you see the below chunk of blueprint nodes.
 
-![2.5](Docs/img_2-5)
+![2.5](Docs/img_2-5.png)
 
 2.5 UI_HUD graph with osc
 
 Zoom into the gray section and find the create OSCServer node(Shown below) and modify the port number to be whatever port you set in companion.
 
-![2.6](Docs/img_2-6)
+![2.6](Docs/img_2-6.png)
 
 2.6 close up of Create OSCServer node 
 
@@ -112,14 +112,14 @@ The studio offers the ability to have as many different themes as you so please.
 
 In order to make changes to the theme of the studio, search for BP_Controller in the World Outliner to open its Details panel. The studio can be configured to display any theme from the Theme Select drop-down menu. 
 
-![3.1](Docs/img_3-1)
+![3.1](Docs/img_3-1.png)
 
 3.1 Showing the dropdown for the theme selector in the details of BP_Controller
 ### Add New Theme
 
 In the content browser, under Studio/Customize/Themes, double-click ENUM_Themes to open up the asset editor. Here, the existing themes will be found. 
 
-![3.2](Docs/img_3-2)
+![3.2](Docs/img_3-2.png)
 
 3.2 ENUM_Themes image where you can see where to add/remove any themes
 
@@ -127,7 +127,7 @@ To add a new theme, select new and add the name of the theme which will be displ
 
 After this, proceed to Studio/Customize/Themes and open up DT_Themes. Click on (+) Add to add a new row. 
 
-![3.3](Docs/img_3-3)
+![3.3](Docs/img_3-3.png)
 
 3.3 Shown above is the data table, DT_Themes, that stores all of the info for the themes
 
@@ -154,13 +154,13 @@ These are for logos that you will be adding to the host panels
 
 If you want to add a new logo into your theme then you will first need to import your square image by dragging and dropping it into a folder(Content/Assets/Textures/Logos).Once imported go to Content/Assets/Materials/LEDWalls. In this folder you will see M_LogoMonitor which you will right click and click create material instance.
 
-![3.4](Docs/img_3-4)
+![3.4](Docs/img_3-4.png)
 
 3.4 create instance of M_LogoMonitor
 
 Name the material something you will easily find later(ex. MI_LogoMonitor_efuse). Once created and renamed, double click on the material, opening a new window to edit its properties.
 
-![3.5](Docs/img_3-5)
+![3.5](Docs/img_3-5.png)
 
 3.5 properties of instance of M_LogoMonitor
 
@@ -174,13 +174,13 @@ These are 16:9(1920x1080) graphics that are to be displayed on any screens(Front
 
 First you need to import your 16:9 image by dragging and dropping it into a folder(Content/Assets/Textures/Screens).Once imported go to Content/Assets/Materials/LEDWalls. In this folder you will see M_Monitor which you will right click and click create material instance.
 
-![3.6](Docs/img_3-6)
+![3.6](Docs/img_3-6.png)
 
 3.6 create instance of M_Monitor
 
 Name the material something you will easily find later(ex. MI_Monitor_efuse). Once created and renamed, double click on the material, opening a new window to edit its properties.
 
-![3.7](Docs/img_3-7)
+![3.7](Docs/img_3-7.png)
 
 3.7 properties of instance of M_Monitor
 
