@@ -1,3 +1,9 @@
+# Warning: This Documentation only applies to the latest release and NOT what is currently in the main branch
+
+We are currently working on updating these docs to match the addition of a new studio as well as updates on the original. The studio at this time is also going to be consired to be in a beta phase for version 2. All Betas for version 2 will be numbered as v0.2.#. If you are looking at trying the new betas feel free to download and try but just know there may be bugs and minimal support on getting setup. 
+
+It is recomended to still use the lates FULL release
+
 # Unreal Engine Esports Virtual Studio: Documentation for Setup and Use
 
 ## Overview
